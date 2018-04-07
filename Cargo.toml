@@ -1,0 +1,17 @@
+[package]
+name = "nostd"
+version = "0.1.0"
+authors = ["Roy Jacobs <roy.jacobs@gmail.com>"]
+
+[dependencies]
+wee_alloc = "0.2.0"
+rlibc = "1.0.0"
+
+[profile.release]
+opt-level = 's'
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = "abort"
